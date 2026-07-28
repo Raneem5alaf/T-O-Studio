@@ -1,0 +1,6 @@
+{
+  "name": "TO Studio",
+  "description": "Immersive Horizontal-Scrolling Portfolio Website for TO Studio in Taif, Saudi Arabia.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

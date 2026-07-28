@@ -1,0 +1,92 @@
+/* 
+   TO STUDIO - LUXURY MINIMALIST PORTFOLIO DESIGN SYSTEM
+   Custom CSS Style definitions for Figma Import & Web Rendering
+*/
+
+/* Core Global Elements */
+body {
+    font-family: 'Tajawal', sans-serif;
+    color: #1A1A1A;
+    background-color: #FFFFFF;
+}
+
+/* Light-grey geometric grid backdrop (0.3 opacity) */
+.geometric-grid-overlay {
+    background-image: 
+        linear-gradient(to right, #eef0f3 1.5px, transparent 1.5px),
+        linear-gradient(to bottom, #eef0f3 1.5px, transparent 1.5px);
+    background-size: 6rem 6rem;
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Fixed Centered Glassmorphism Header */
+#figma-header {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(244, 244, 246, 0.7);
+    transition: all 0.3s ease;
+}
+
+/* Navigation Interactive link underlines */
+.nav-link {
+    transition: color 0.3s ease;
+    font-family: 'Tajawal', sans-serif;
+}
+
+/* ========================================================
+   STACK SHUFFLE CARDS - PHYSICAL TILT AND DEEP 3D SHADOWS
+   ======================================================== */
+
+#shuffle-deck {
+    position: relative;
+    perspective: 1200px;
+}
+
+/* Custom Card Level styling to match our React app's look */
+.shadow-card-level-1 {
+    transform: translate(0px, 0px) scale(1) rotate(-3.5deg);
+    box-shadow: 0 45px 95px rgba(0, 0, 0, 0.22);
+}
+
+.shadow-card-level-2 {
+    transform: translate(-12px, -10px) scale(0.965) rotate(2.5deg);
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.17);
+}
+
+.shadow-card-level-3 {
+    transform: translate(-24px, -20px) scale(0.93) rotate(-1.5deg);
+    box-shadow: 0 25px 65px rgba(0, 0, 0, 0.13);
+}
+
+.shadow-card-level-4 {
+    transform: translate(-36px, -30px) scale(0.895) rotate(3deg);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.09);
+    opacity: 0.75;
+}
+
+/* Animation triggers for Card Fly-out transitions */
+#shuffle-deck > div {
+    will-change: transform, opacity, z-index;
+}
+
+/* Slogan Fade In Entry styling */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.98) translateY(10px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fadeIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Navigation link active state (ScrollSpy) */
+.nav-link.active .h-\[2px\] {
+    width: 100% !important;
+}
+.nav-link.active span {
+    color: #7a7a7a !important; /* royal-blue replacement */
+}

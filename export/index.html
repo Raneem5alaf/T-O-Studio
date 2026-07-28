@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO Studio | استوديو التصوير الفاخر</title>
+    <!-- Tajawal Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;950&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS (Play CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'royal-blue': '#7a7a7a',
+                        'deep-black': '#1A1A1A',
+                    },
+                    fontFamily: {
+                        sans: ['Tajawal', 'sans-serif'],
+                        display: ['Tajawal', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-white text-deep-black font-sans leading-relaxed selection:bg-royal-blue selection:text-white relative overflow-x-hidden antialiased">
+
+    <!-- background grid overlays with geometric rhythm -->
+    <div class="geometric-grid-overlay pointer-events-none fixed inset-0 opacity-[0.3] z-0"></div>
+
+    <!-- MAIN MINIMALIST HEADER -->
+    <header class="fixed top-0 left-0 w-full h-[64px] md:h-[95px] z-[100] bg-white/75 backdrop-blur-md border-b border-zinc-100/60 flex items-center px-4 md:px-16" id="figma-header">
+        <div class="w-full max-w-7xl mx-auto flex items-center justify-between">
+            
+            <!-- RIGHT COLUMN: Logo (Visible only on desktop, aligned to the right in RTL) -->
+            <div class="hidden md:flex items-center justify-start w-[200px] shrink-0" id="header-logo" style="transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;">
+                <a href="#section-hero" class="block">
+                    <img src="../src/assets/images/regenerated_image_1784122943237.png" alt="TO Studio Logo" class="h-[28px] md:h-[36px] w-auto object-contain">
+                </a>
+            </div>
+
+            <!-- CENTER COLUMN: Navigation menu (Takes full width and centers on mobile, or centers perfectly in the middle of 3-columns on desktop) -->
+            <div class="flex-1 flex justify-center items-center">
+                <nav class="flex items-center gap-[12px] md:gap-[40px]" id="header-nav">
+                    <a href="#section-hero" class="nav-link group py-1 flex flex-col items-center gap-0.5">
+                        <div class="flex items-center gap-1 sm:gap-1.5 md:gap-2">
+                            <span class="font-mono text-[8px] sm:text-[9px] md:text-[10px] text-zinc-400 group-hover:text-royal-blue hidden md:inline-block">01</span>
+                            <span class="text-[10px] sm:text-xs md:text-sm font-bold tracking-wide transition-all group-hover:text-royal-blue text-deep-black/80">الرئيسية</span>
+                        </div>
+                        <div class="h-[2px] w-0 bg-royal-blue transition-all group-hover:w-full rounded-full"></div>
+                    </a>
+                    <a href="#section-portfolio" class="nav-link group py-1 flex flex-col items-center gap-0.5">
+                        <div class="flex items-center gap-1 sm:gap-1.5 md:gap-2">
+                            <span class="font-mono text-[8px] sm:text-[9px] md:text-[10px] text-zinc-400 group-hover:text-royal-blue hidden md:inline-block">02</span>
+                            <span class="text-[10px] sm:text-xs md:text-sm font-bold tracking-wide transition-all group-hover:text-royal-blue text-deep-black/80">أعمالنا</span>
+                        </div>
+                        <div class="h-[2px] w-0 bg-royal-blue transition-all group-hover:w-full rounded-full"></div>
+                    </a>
+                    <a href="#section-services" class="nav-link group py-1 flex flex-col items-center gap-0.5">
+                        <div class="flex items-center gap-1 sm:gap-1.5 md:gap-2">
+                            <span class="font-mono text-[8px] sm:text-[9px] md:text-[10px] text-zinc-400 group-hover:text-royal-blue hidden md:inline-block">03</span>
+                            <span class="text-[10px] sm:text-xs md:text-sm font-bold tracking-wide transition-all group-hover:text-royal-blue text-deep-black/80">خدماتنا</span>
+                        </div>
+                        <div class="h-[2px] w-0 bg-royal-blue transition-all group-hover:w-full rounded-full"></div>
+                    </a>
+                    <a href="#section-contact" class="nav-link group py-1 flex flex-col items-center gap-0.5">
+                        <div class="flex items-center gap-1 sm:gap-1.5 md:gap-2">
+                            <span class="font-mono text-[8px] sm:text-[9px] md:text-[10px] text-zinc-400 group-hover:text-royal-blue hidden md:inline-block">04</span>
+                            <span class="text-[10px] sm:text-xs md:text-sm font-bold tracking-wide transition-all group-hover:text-royal-blue text-deep-black/80">
+                                <span class="md:hidden">تواصل</span>
+                                <span class="hidden md:inline">تواصل معنا</span>
+                            </span>
+                        </div>
+                        <div class="h-[2px] w-0 bg-royal-blue transition-all group-hover:w-full rounded-full"></div>
+                    </a>
+                </nav>
+            </div>
+
+            <!-- LEFT COLUMN: SPACER (Balances the layout perfectly on desktop, hidden on mobile) -->
+            <div class="hidden md:block w-[200px] shrink-0"></div>
+
+        </div>
+    </header>
+
+    <!-- SECTION A: HERO (HOME) -->
+    <section id="section-hero" class="relative w-full min-h-screen flex flex-col justify-center items-center px-6 pt-24 z-10 transition-colors duration-700">
+        <div class="relative flex flex-col items-center text-center w-full max-w-4xl max-h-full">
+            <!-- Large High-Res Studio Logo centered -->
+            <div class="mb-10 selection:bg-transparent pointer-events-none w-full flex justify-center animate-fade-in">
+                <img src="../src/assets/images/regenerated_image_1784122943237.png" alt="TO Studio Horizontal Logo" class="w-[500px] max-w-[85vw] h-auto object-contain drop-shadow-[0_4px_12px_rgba(0,0,0,0.02)]">
+            </div>
+            <!-- Minimal slogan layout -->
+            <p class="font-sans text-sm sm:text-base md:text-lg text-zinc-700 font-bold tracking-normal px-4 leading-relaxed max-w-2xl select-text">
+                نصنع الجمال بدقة احترافية
+                <span class="mx-3 text-zinc-300">|</span> 
+                إحدى شركات مجموعة تركي عمر التجارية
+            </p>
+        </div>
+    </section>
+
+    <!-- SECTION B: OUR WORK (THE SHUFFLE ALBUM) -->
+    <section id="section-portfolio" class="relative w-full min-h-screen flex flex-col justify-center py-20 px-6 md:px-16 lg:px-24 z-10">
+        <div class="w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20">
+            
+            <!-- Minimalist Title Block (Align right in RTL) -->
+            <div class="relative flex flex-col gap-3 text-right max-w-md w-full shrink-0">
+                <div class="flex items-center gap-3 justify-start">
+                    <span class="w-10 h-[2px] bg-royal-blue" />
+                    <span class="font-mono text-xs text-royal-blue tracking-[0.3em] uppercase font-bold">
+                        02 / أعمال الاستوديو • OUR PORTFOLIO
+                    </span>
+                </div>
+                <h2 class="font-display font-black text-4xl md:text-6xl tracking-normal text-deep-black mt-1 leading-tight">
+                    أعمالنا الإبداعية المختارة
+                </h2>
+                <span class="text-zinc-400 font-sans text-xs md:text-sm mt-1 tracking-wider block">
+                    استعراض لأبرز اللحظات والإنتاجات التي تعكس شغفنا واحترافيتنا
+                </span>
+            </div>
+
+            <!-- Massive full-bleed shuffle stack (Left column in RTL) -->
+            <div class="relative flex-1 flex items-center justify-center w-full min-h-[460px] md:min-h-[550px]" id="deck-wrapper">
+                
+                <!-- Deck cards wrapper (Sized is increased by 60%-80%) -->
+                <div class="relative w-[88vw] sm:w-[480px] md:w-[500px] lg:w-[580px] h-[360px] sm:h-[440px] md:h-[480px] lg:h-[520px] flex items-center justify-center" id="shuffle-deck">
+                    
+                    <!-- Card 1 -->
+                    <div class="absolute w-full h-full rounded-[20px] overflow-hidden cursor-pointer select-none shadow-card-level-1 transition-all duration-[400ms] ease-[cubic-bezier(0.16,1,0.3,1)] active:scale-95" data-index="0" style="z-index: 10;">
+                        <div class="w-full h-full relative">
+                            <img src="../src/assets/images/regenerated_image_1780488098601.jpg" alt="Elite Abaya Lookbook Editorial" class="w-full h-full object-cover">
+                            <!-- Vignette cover elements -->
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent pointer-events-none"></div>
+                            <div class="absolute bottom-6 right-6 font-mono text-[13px] font-black tracking-widest text-[#FFFFFF]/90">01 / 04</div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="absolute w-full h-full rounded-[20px] overflow-hidden cursor-pointer select-none shadow-card-level-2 transition-all duration-[400ms] ease-[cubic-bezier(0.16,1,0.3,1)]" data-index="1" style="z-index: 9;">
+                        <div class="w-full h-full relative">
+                            <img src="../src/assets/images/regenerated_image_1780476573704.jpg" alt="Luxury Jewelry High-Key Macro Shots" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent pointer-events-none"></div>
+                            <div class="absolute bottom-6 right-6 font-mono text-[13px] font-black tracking-widest text-[#FFFFFF]/90">02 / 04</div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="absolute w-full h-full rounded-[20px] overflow-hidden cursor-pointer select-none shadow-card-level-3 transition-all duration-[400ms] ease-[cubic-bezier(0.16,1,0.3,1)]" data-index="2" style="z-index: 8;">
+                        <div class="w-full h-full relative">
+                            <img src="../src/assets/images/regenerated_image_1780492870980.jpg" alt="Sovereign Executive Portrait Pack" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent pointer-events-none"></div>
+                            <div class="absolute bottom-6 right-6 font-mono text-[13px] font-black tracking-widest text-[#FFFFFF]/90">03 / 04</div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="absolute w-full h-full rounded-[20px] overflow-hidden cursor-pointer select-none shadow-card-level-4 transition-all duration-[400ms] ease-[cubic-bezier(0.16,1,0.3,1)]" data-index="3" style="z-index: 7;">
+                        <div class="w-full h-full relative">
+                            <img src="../src/assets/images/regenerated_image_1780492021801.jpg" alt="Royal Open Reception Event" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent pointer-events-none"></div>
+                            <div class="absolute bottom-6 right-6 font-mono text-[13px] font-black tracking-widest text-[#FFFFFF]/90">04 / 04</div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION C: SERVICES SECTION -->
+    <section id="section-services" class="relative w-full min-h-screen flex flex-col justify-center py-20 px-6 md:px-16 lg:px-24 border-t border-zinc-100/40 z-10">
+        <div class="w-full max-w-7xl mx-auto flex flex-col gap-12">
+            
+            <!-- Header styled exactly as Portfolio & Services in the prompt request -->
+            <div class="relative flex flex-col gap-3 text-right max-w-4xl">
+                <div class="flex items-center gap-3 justify-start">
+                    <span class="w-10 h-[2px] bg-royal-blue" />
+                    <span class="font-mono text-xs text-royal-blue tracking-[0.3em] uppercase font-bold">
+                        03 / خدمات الاستوديو • OUR SERVICES
+                    </span>
+                </div>
+                <h2 class="font-display font-black text-4xl md:text-6xl tracking-normal text-deep-black mt-1 leading-tight">
+                    خدماتنا الإنتاجية الفاخرة
+                </h2>
+                <span class="text-zinc-400 font-sans text-xs md:text-sm mt-1 tracking-wider block">
+                    مجموعة متكاملة من الخدمات الفنية لشركائنا وصانعي العلامات التجارية المرموقة
+                </span>
+            </div>
+
+            <!-- Horizontal / Grid Track of beautiful cards: Studio Rental, Jewelry, Fashion, Products -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full mt-4">
+                
+                <!-- Service 1: Studio Rental -->
+                <div class="relative rounded-[24px] overflow-hidden group shadow-md border border-zinc-100 flex flex-col justify-end h-[420px] md:h-[480px] bg-zinc-50 transition-all duration-300 hover:-translate-y-2">
+                    <!-- Background image source -->
+                    <img src="../src/assets/images/regenerated_image_1780478010914.jpg" alt="Vanguard Studio Space" class="absolute inset-0 w-full h-full object-cover filter brightness-[0.9] transition-transform duration-700 ease-out group-hover:scale-105">
+                    <!-- Overlay shadow gradient -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent pointer-events-none z-10"></div>
+                    <!-- Service text overlay content -->
+                    <div class="relative z-20 p-6 text-right text-white">
+                        <span class="font-mono text-[9px] bg-royal-blue text-white px-2.5 py-0.5 rounded-full font-bold inline-block mb-2">تأجير المساحة</span>
+                        <h3 class="font-display font-black text-xl text-white group-hover:text-royal-blue transition-colors duration-300">تأجير مساحة الاستوديو</h3>
+                        <p class="font-sans text-[11px] text-zinc-300 mt-1 leading-relaxed">مساحة مجهزة بإضاءة احترافية فائقة التجّهيز للمبدعين وصانعي العلامات.</p>
+                    </div>
+                </div>
+
+                <!-- Service 2: Jewelry -->
+                <div class="relative rounded-[24px] overflow-hidden group shadow-md border border-zinc-100 flex flex-col justify-end h-[420px] md:h-[480px] bg-zinc-50 transition-all duration-300 hover:-translate-y-2">
+                    <img src="../src/assets/images/regenerated_image_1780476573704.jpg" alt="Macro Jewelry Photography" class="absolute inset-0 w-full h-full object-cover filter brightness-[0.9] transition-transform duration-700 ease-out group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent pointer-events-none z-10"></div>
+                    <div class="relative z-20 p-6 text-right text-white">
+                        <span class="font-mono text-[9px] bg-royal-blue text-white px-2.5 py-0.5 rounded-full font-bold inline-block mb-2">مجوهرات فاخرة</span>
+                        <h3 class="font-display font-black text-xl text-white group-hover:text-royal-blue transition-colors duration-300">تصوير مجوهرات</h3>
+                        <p class="font-sans text-[11px] text-zinc-300 mt-1 leading-relaxed">دقة بروتوكولية فائقة وتكبير ماكرو دقيق يعكس بريق الأحجار الكريمة.</p>
+                    </div>
+                </div>
+
+                <!-- Service 3: Fashion -->
+                <div class="relative rounded-[24px] overflow-hidden group shadow-md border border-zinc-100 flex flex-col justify-end h-[420px] md:h-[480px] bg-zinc-50 transition-all duration-300 hover:-translate-y-2">
+                    <img src="../src/assets/images/regenerated_image_1780488098601.jpg" alt="Editorial Fashion & Abaya" class="absolute inset-0 w-full h-full object-cover filter brightness-[0.9] transition-transform duration-700 ease-out group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent pointer-events-none z-10"></div>
+                    <div class="relative z-20 p-6 text-right text-white">
+                        <span class="font-mono text-[9px] bg-royal-blue text-white px-2.5 py-0.5 rounded-full font-bold inline-block mb-2">أزياء وحملات</span>
+                        <h3 class="font-display font-black text-xl text-white group-hover:text-royal-blue transition-colors duration-300">تصوير العبايات والأزياء</h3>
+                        <p class="font-sans text-[11px] text-zinc-300 mt-1 leading-relaxed">حملات إعلانية مبتكرة تبرز انسيابية الأقمشة وفخامة تفاصيل التصميم.</p>
+                    </div>
+                </div>
+
+                <!-- Service 4: Products -->
+                <div class="relative rounded-[24px] overflow-hidden group shadow-md border border-zinc-100 flex flex-col justify-end h-[420px] md:h-[480px] bg-zinc-50 transition-all duration-300 hover:-translate-y-2">
+                    <img src="../src/assets/images/regenerated_image_1780478261159.jpg" alt="Commercial Products / Food" class="absolute inset-0 w-full h-full object-cover filter brightness-[0.9] transition-transform duration-700 ease-out group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent pointer-events-none z-10"></div>
+                    <div class="relative z-20 p-6 text-right text-white">
+                        <span class="font-mono text-[9px] bg-royal-blue text-white px-2.5 py-0.5 rounded-full font-bold inline-block mb-2">إنتاج تجاري</span>
+                        <h3 class="font-display font-black text-xl text-white group-hover:text-royal-blue transition-colors duration-300">تصوير المنتجات ومنيو الطعام</h3>
+                        <p class="font-sans text-[11px] text-zinc-300 mt-1 leading-relaxed">تنسيق إبداعي وزوايا متناهية الجودة تضع علامتكم في الواجهة.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION D: CONTACT FOOTER (MINIMALIST ROW) -->
+    <footer id="section-contact" class="relative w-full py-16 px-6 md:px-16 lg:px-24 bg-white border-t border-zinc-100/80 z-10">
+        <div class="w-full max-w-7xl mx-auto flex flex-col gap-10">
+            
+            <!-- Single-Row Horizontal Footer Layout -->
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-8 pb-10 border-b border-zinc-200/70">
+                
+                <!-- Turki Omar Group Logo on the far right (RTL logic) -->
+                <div class="flex items-center justify-center lg:justify-start">
+                    <img src="../src/assets/images/regenerated_image_1784122943759.png" alt="Turki Omar Group Studio Logo" class="h-[35px] w-auto object-contain">
+                </div>
+
+                <!-- Snapchat, TikTok, Instagram Links using @tostudioksa -->
+                <div class="flex items-center gap-6 justify-center" dir="ltr">
+                    <a href="https://instagram.com/tostudioksa" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-zinc-700 hover:text-royal-blue transition-colors font-medium text-xs">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37zM17.5 6.5h.01"></path></svg>
+                        <span>@tostudioksa</span>
+                    </a>
+                    
+                    <a href="https://tiktok.com/@tostudioksa" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-zinc-700 hover:text-royal-blue transition-colors font-medium text-xs">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path></svg>
+                        <span>TikTok</span>
+                    </a>
+                    
+                    <a href="https://snapchat.com/add/tostudioksa" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-zinc-700 hover:text-royal-blue transition-colors font-medium text-xs">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12.206.793c.99 0 4.347.276 5.93 3.821.529 1.193.403 3.219.299 4.847l-.003.06c-.012.18-.022.345-.03.51.075.045.203.09.401.09.3-.016.659-.12 1.033-.301.165-.088.344-.104.464-.104.182 0 .359.029.509.09.45.149.734.479.734.838.015.449-.39.839-1.213 1.168-.089.029-.209.075-.344.119-.45.135-1.139.36-1.333.81-.09.224-.061.524.12.868l.015.015c.06.136 1.526 3.475 4.791 4.014.255.044.435.27.42.509 0 .075-.015.149-.045.225-.24.569-1.273.988-3.146 1.271-.059.091-.12.375-.164.57-.029.179-.074.36-.134.553-.076.271-.27.405-.555.405h-.03c-.135 0-.313-.031-.538-.074-.36-.075-.765-.135-1.273-.135-.3 0-.599.015-.913.074-.6.104-1.123.464-1.723.884-.853.599-1.826 1.288-3.294 1.288-.06 0-.119-.015-.18-.015h-.149c-1.468 0-2.427-.675-3.279-1.288-.599-.42-1.107-.779-1.707-.884-.314-.045-.629-.074-.928-.074-.54 0-.958.089-1.272.149-.211.043-.391.074-.54.074-.374 0-.523-.224-.583-.42-.061-.192-.09-.389-.135-.567-.046-.181-.105-.494-.166-.57-1.918-.222-2.95-.642-3.189-1.226-.031-.063-.052-.15-.055-.225-.015-.243.165-.465.42-.509 3.264-.54 4.73-3.879 4.791-4.02l.016-.029c.18-.345.224-.645.119-.869-.195-.434-.884-.658-1.332-.809-.121-.029-.24-.074-.346-.119-1.107-.435-1.257-.93-1.197-1.273.09-.479.674-.793 1.168-.793.146 0 .27.029.383.074.42.194.789.3 1.104.3.234 0 .384-.06.465-.105l-.046-.569c-.098-1.626-.225-3.651.307-4.837C7.392 1.077 10.739.807 11.727.807l.419-.015h.06z"></path></svg>
+                        <span>Snapchat</span>
+                    </a>
+                </div>
+
+                <!-- WhatsApp & Email Info -->
+                <div class="flex items-center gap-6 justify-center text-xs" dir="ltr">
+                    <a href="mailto:info@tostudioksa.com" class="font-mono text-zinc-700 hover:text-royal-blue transition-colors font-medium">info@tostudioksa.com</a>
+                    <a href="https://wa.me/966550992123" class="font-mono text-zinc-900 hover:text-royal-blue transition-colors font-bold">+966 550992123</a>
+                </div>
+
+                <!-- Custom outlined Globe Website URL -->
+                <div class="flex items-center gap-2 justify-center" dir="ltr">
+                    <svg class="w-4 h-4 text-royal-blue" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20M2 12h20"></path></svg>
+                    <a href="https://www.tostudioksa.com" target="_blank" rel="noopener noreferrer" class="font-mono text-xs text-zinc-900 hover:text-royal-blue font-semibold transition-colors">www.tostudioksa.com</a>
+                </div>
+
+            </div>
+
+            <!-- Professional copyright text on the far left, group branding on the far right -->
+            <div class="flex flex-col sm:flex-row items-center justify-between text-zinc-400 text-[10px] uppercase font-medium tracking-widest gap-4">
+                <div class="text-center sm:text-right">
+                    TO STUDIO &copy; 2024 - PART OF TURKI OMAR GROUP
+                </div>
+                <div class="text-zinc-300 text-center sm:text-left">
+                    Professional Studio Portfolio
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- FLOATING CTA BUTTON: BOOK NOW | احجز الآن -->
+    <div class="fixed bottom-6 right-6 md:bottom-10 md:right-10 z-[100] animate-fade-in" style="animation-delay: 1s;">
+        <a href="https://wa.me/966550992123" target="_blank" rel="noopener noreferrer" class="relative flex items-center gap-2.5 bg-royal-blue text-white font-mono font-medium text-xs md:text-sm px-5 py-3 md:px-7 md:py-4 rounded-full shadow-[0_10px_30px_rgba(122,122,122,0.25)] hover:shadow-[0_14px_40px_rgba(122,122,122,0.4)] hover:bg-white hover:text-royal-blue group transition-all duration-500 overflow-hidden" id="book-now-cta">
+            <span class="relative z-10 flex items-center gap-2.5">
+                <svg class="w-4 h-4 md:w-5 md:h-5 text-current transition-transform duration-500 group-hover:rotate-[360deg]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                <span class="tracking-widest flex items-center gap-2 font-display">
+                    <span>BOOK NOW</span>
+                    <span class="text-white/30 group-hover:text-royal-blue/30">|</span>
+                    <span class="font-sans font-bold text-xs md:text-sm">احجز الآن</span>
+                </span>
+            </span>
+        </a>
+    </div>
+
+    <!-- Snappy Stack Card Shuffle Logic Script -->
+    <script src="script.js"></script>
+</body>
+</html>

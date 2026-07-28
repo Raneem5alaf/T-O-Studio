@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@600;700;800&family=Tajawal:wght@400;500;700;800&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Tajawal", "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Amiri", "Playfair Display", Georgia, serif;
+  --font-display: "Tajawal", "Syne", "Space Grotesk", sans-serif;
+  --font-mono: "Space Grotesk", monospace;
+  
+  --color-royal-blue: #7a7a7a;
+  --color-brand-blue: #7a7a7a;
+  --color-noir-black: #1A1A1A;
+  --color-deep-black: #1A1A1A;
+  --color-grey-light: #F5F5F7;
+  --color-metallic-grey: #8E8E93;
+}
+
+/* Base resets & custom animations */
+html {
+  scroll-behavior: smooth;
+  background-color: #FFFFFF;
+  color: #1A1A1A;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Hide default scrollbars for smooth integrated scrolling */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Custom interactive grain overlay for high-end organic texture */
+.grain-overlay {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.02'/%3E%3C/svg%3E");
+}
+
+/* Liquid fluid effect container styling */
+.liquid-blur {
+  filter: blur(80px);
+}
+

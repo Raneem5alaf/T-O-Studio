@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تو استوديو • TO Studio Photography Portfolio</title>
+  
+  <!-- Premium Fonts Pairing -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Tajawal:wght@400;500;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailind CSS Custom CDN Integration -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'royal-blue': '#0040E3',
+            'deep-black': '#1A1A1A',
+          },
+          fontFamily: {
+            sans: ['Tajawal', 'Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Scrollbar Styles */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #FFFFFF;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #E4E4E7;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #0040E3;
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    
+    /* Fine Organic Noise Overlay */
+    .grain-overlay {
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.04'/%3E%3C/svg%3E");
+    }
+  </style>
+</head>
+<body class="relative bg-white text-deep-black font-sans overflow-x-hidden selection:bg-royal-blue selection:text-white">
+
+  <!-- Subtle Subtle Background Geometric Grid Line pattern (6rem-size, 30% Opacity) -->
+  <div class="fixed inset-0 pointer-events-none bg-[linear-gradient(to_right,#f3f4f6_1.5px,transparent_1.5px),linear-gradient(to_bottom,#f3f4f6_1.5px,transparent_1.5px)] bg-[size:6rem_6rem] opacity-30 z-0"></div>
+
+  <!-- Smooth Grain Texture Overlay -->
+  <div class="fixed inset-0 pointer-events-none grain-overlay z-50 opacity-60 mix-blend-overlay"></div>
+
+  <!-- ================= MASTER HEADER (Fixed & Centered) ================= -->
+  <header class="fixed top-0 left-0 w-full h-20 z-[100] bg-white/80 backdrop-blur-md border-b border-zinc-50 flex items-center justify-center select-none">
+    
+    <!-- BRANDING LOGO (Top-Right Office Spot, margin 40px, top 20px) -->
+    <div class="absolute right-6 md:right-[40px] top-[15px] h-[50px] flex items-center">
+      <a href="#hero" class="flex items-center transition-transform duration-300 hover:scale-103 active:scale-97">
+        <!-- SVG Vector TO Studio Logo (Horizontal) -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" width="200" height="50" fill="none" class="h-[50px] w-auto">
+          <!-- Shutter Icon (Vibrant Royal Blue & Indigo) -->
+          <g transform="translate(10, 5)">
+            <circle cx="25" cy="25" r="23" stroke="#E4E4E7" stroke-width="1.5" />
+            <circle cx="25" cy="25" r="20" stroke="#0040E3" stroke-width="2.5" />
+            <path d="M 25 5 C 32 5, 38 10, 40 17 L 31 20 C 30 16, 28 14, 25 14 Z" fill="#0040E3" />
+            <path d="M 45 25 C 45 32, 40 38, 33 40 L 30 31 C 34 30, 36 28, 36 25 Z" fill="#3B82F6" />
+            <path d="M 25 45 C 18 45, 12 40, 10 33 L 19 30 C 20 34, 22 36, 25 36 Z" fill="#60A5FA" />
+            <path d="M 5 25 C 5 18, 10 12, 17 10 L 20 19 C 16 20, 14 22, 14 25 Z" fill="#1D4ED8" />
+            <circle cx="25" cy="25" r="4.5" fill="#0040E3" />
+            <circle cx="25" cy="25" r="1.5" fill="#FFFFFF" />
+          </g>
+          <text x="72" y="31" font-family="'Tajawal', sans-serif" font-size="19" font-weight="800" fill="#1A1A1A" letter-spacing="0.5">تـو استوديو</text>
+          <text x="73" y="47" font-family="'Inter', sans-serif" font-size="10.5" font-weight="700" fill="#0040E3" letter-spacing="3.5">TO STUDIO</text>
+        </svg>
+      </a>
+    </div>
+
+    <!-- NAVIGATION MENU (Centered in the Header) -->
+    <nav class="flex items-center gap-6 md:gap-[40px]">
+      <a href="#hero" class="nav-link group flex flex-col items-center gap-1 cursor-pointer">
+        <div class="flex items-center gap-1.5 font-sans font-bold text-xs md:text-sm text-royal-blue scale-105">
+          <span class="font-mono text-[9px] md:text-[10px] text-royal-blue">01</span>
+          <span>الرئيسية</span>
+        </div>
+        <div class="h-[2px] rounded-full w-[90%] bg-royal-blue transition-all duration-300"></div>
+      </a>
+      
+      <a href="#services-section" class="nav-link group flex flex-col items-center gap-1 cursor-pointer">
+        <div class="flex items-center gap-1.5 font-sans font-bold text-xs md:text-sm text-deep-black/80 hover:text-royal-blue transition-colors duration-300">
+          <span class="font-mono text-[9px] md:text-[10px] text-zinc-400 group-hover:text-deep-black">02</span>
+          <span>الخدمات</span>
+        </div>
+        <div class="h-[2px] rounded-full w-0 bg-royal-blue/60 group-hover:w-1/2 transition-all duration-300"></div>
+      </a>
+      
+      <a href="#footer" class="nav-link group flex flex-col items-center gap-1 cursor-pointer">
+        <div class="flex items-center gap-1.5 font-sans font-bold text-xs md:text-sm text-deep-black/80 hover:text-royal-blue transition-colors duration-300">
+          <span class="font-mono text-[9px] md:text-[10px] text-zinc-400 group-hover:text-deep-black">03</span>
+          <span>تواصل معنا</span>
+        </div>
+        <div class="h-[2px] rounded-full w-0 bg-royal-blue/60 group-hover:w-1/2 transition-all duration-300"></div>
+      </a>
+    </nav>
+
+  </header>
+
+  <!-- ================= SECTION 1: HERO SECTION (Vertical Scroll Area) ================= -->
+  <section id="hero" class="relative min-h-screen w-full flex flex-col items-center justify-center bg-white px-6 pt-24 z-10 overflow-hidden">
+    
+    <!-- Central Content Area -->
+    <div class="relative z-10 flex flex-col items-center text-center w-full max-w-4xl opacity-0 animate-[fadeIn_1.6s_ease-out_forwards]">
+      
+      <!-- Big Centered Shutter Studio Logo Visual (Elegant Scale Width: 450px) -->
+      <div class="mb-8 pointer-events-none select-none w-full flex justify-center max-w-[450px]">
+        <!-- Vector Stacked Logo of TO Studio -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="100%" height="auto" class="w-full">
+          <!-- Shutter Icon (Vibrant Royal Blue & Indigo) centered at (80, 50) -->
+          <g transform="translate(55, 12)">
+            <circle cx="25" cy="25" r="23" stroke="#E4E4E7" stroke-width="1.5" />
+            <circle cx="25" cy="25" r="20" stroke="#0040E3" stroke-width="2.5" />
+            <path d="M 25 5 C 32 5, 38 10, 40 17 L 31 20 C 30 16, 28 14, 25 14 Z" fill="#0040E3" />
+            <path d="M 45 25 C 45 32, 40 38, 33 40 L 30 31 C 34 30, 36 28, 36 25 Z" fill="#3B82F6" />
+            <path d="M 25 45 C 18 45, 12 40, 10 33 L 19 30 C 20 34, 22 36, 25 36 Z" fill="#60A5FA" />
+            <path d="M 5 25 C 5 18, 10 12, 17 10 L 20 19 C 16 20, 14 22, 14 25 Z" fill="#1D4ED8" />
+            <circle cx="25" cy="25" r="4.5" fill="#0040E3" />
+            <circle cx="25" cy="25" r="1.5" fill="#FFFFFF" />
+          </g>
+          
+          <text x="80" y="94" font-family="'Tajawal', sans-serif" font-size="23" font-weight="900" fill="#1A1A1A" text-anchor="middle" letter-spacing="0.5">تـو استوديو</text>
+          <text x="80" y="115" font-family="'Inter', sans-serif" font-size="11.5" font-weight="700" fill="#0040E3" text-anchor="middle" letter-spacing="4.5">TO STUDIO</text>
+          <text x="80" y="134" font-family="'Inter', sans-serif" font-size="8.5" font-weight="600" fill="#A1A1AA" text-anchor="middle" letter-spacing="6">TAIF</text>
+        </svg>
+      </div>
+
+      <!-- Slogan (Fabulous clean Font Tajawal & Dark Gray Accent) -->
+      <p class="font-sans text-sm sm:text-base md:text-lg lg:text-xl text-zinc-700 font-bold tracking-normal leading-relaxed mb-10 max-w-2xl px-4">
+        نصنع الجمال بدقة احترافية 
+        <span class="mx-2.5 md:mx-3.5 text-zinc-200">|</span> 
+        إحدى شركات مجموعة تركي عمر التجارية
+      </p>
+
+      <!-- Scroll indication CTA -->
+      <a href="#services-section" class="flex flex-col items-center gap-2 group transition-opacity duration-300 hover:opacity-80">
+        <span class="font-mono text-[10px] text-zinc-400 uppercase tracking-[0.3em] font-bold">ابدأ بالاستكشاف</span>
+        <div class="w-[1.5px] h-12 bg-zinc-200 group-hover:bg-royal-blue transition-colors duration-500 rounded-full relative overflow-hidden">
+          <div class="h-1/2 w-full bg-royal-blue absolute top-0 left-0 animate-[scrollLine_2s_infinite_ease-in-out]"></div>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ================= SECTION 2: SERVICES SECTION (Horizontal Scroll Container Track) ================= -->
+  <!-- 
+    The layout below implements a beautiful Horizontal scroll tracking area.
+    On Desktop, it operates as an elegant horizontal flex list which fits nicely into the page flow.
+    On Desktop you can scroll horizontally. On Mobile, it wraps smoothly, remaining responsive.
+  -->
+  <section id="services-section" class="relative py-24 bg-zinc-50 border-y border-zinc-100/60 z-10 select-none">
+    
+    <div class="w-full max-w-7xl mx-auto px-6 md:px-10 mb-12">
+      <!-- Section Title Header (RTL Aligned right) -->
+      <div class="flex items-center gap-3 justify-start mb-4">
+        <span class="w-8 h-[2px] bg-royal-blue"></span>
+        <span class="font-mono text-xs text-royal-blue tracking-[0.3em] uppercase font-bold">02 / الخدمات • SERVICES</span>
+      </div>
+      <h2 class="font-sans font-black text-3xl md:text-5xl text-deep-black tracking-tight leading-tight">
+        خدماتنا الإنتاجية الفاخرة
+      </h2>
+      <p class="text-zinc-400 text-xs md:text-sm mt-2 max-w-lg">
+        تُصنع بأحدث التقنيات البصرية والمعايير الاحترافية المعتمدة لتقديم علامتك التجارية برقي لا يضاهى.
+      </p>
+    </div>
+
+    <!-- Horizontal scroll slider track - clean & highly architectural -->
+    <div class="w-full overflow-x-auto overflow-y-hidden no-scrollbar py-6 cursor-grab active:cursor-grabbing" id="horizontal-scroll-track">
+      <div class="flex gap-6 md:gap-8 px-6 md:px-[40px] w-max select-none" style="min-width: 100%;">
+        
+        <!-- Service Card 1: مساحة الاستوديو -->
+        <div class="relative w-[85vw] sm:w-[50vw] md:w-[35vw] lg:w-[28vw] h-[55vh] flex-none rounded-3xl overflow-hidden group shadow-[0_4px_30px_rgba(0,0,0,0.03)] border border-zinc-200/50 bg-white transition-all duration-300 hover:-translate-y-2">
+          <!-- Placeholder Image - Customizable by swapping URL -->
+          <div class="absolute inset-0 overflow-hidden bg-zinc-100">
+            <!-- Large Image Placeholder containing TO Studio Style aesthetic -->
+            <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=800&q=80" 
+                 alt="مساحة الاستوديو" 
+                 class="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105 filter brightness-[0.95]"
+                 referrerpolicy="no-referrer">
+          </div>
+          <!-- Dark Premium Overlay -->
+          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent opacity-90 transition-opacity duration-300 pointer-events-none z-10"></div>
+          
+          <!-- Info Details inside card -->
+          <div class="absolute bottom-0 inset-x-0 p-6 flex flex-col justify-end text-white z-20 text-right">
+            <span class="font-mono text-[9px] bg-royal-blue text-white px-2.5 py-0.5 rounded-full font-bold w-max mb-2.5">CREATIVE SPACE</span>
+            <h3 class="font-sans font-black text-lg md:text-xl text-white group-hover:text-royal-blue transition-colors duration-300">
+              تأجير مساحة الاستوديو
+            </h3>
+            <p class="font-sans text-[11px] text-zinc-300 mt-1.5 leading-relaxed">
+              مساحة تجريبية متكاملة بأنظمة دمج ضوئي وخلفيات راقية للتصوير الحر والتمثيل الاحترافي.
+            </p>
+          </div>
+        </div>
+
+        <!-- Service Card 2: تصوير المجوهرات -->
+        <div class="relative w-[85vw] sm:w-[50vw] md:w-[35vw] lg:w-[28vw] h-[55vh] flex-none rounded-3xl overflow-hidden group shadow-[0_4px_30px_rgba(0,0,0,0.03)] border border-zinc-200/50 bg-white transition-all duration-300 hover:-translate-y-2">
+          <div class="absolute inset-0 overflow-hidden bg-zinc-100">
+            <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80" 
+                 alt="تصوير المجوهرات" 
+                 class="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105 filter brightness-[0.95]"
+                 referrerpolicy="no-referrer">
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent opacity-90 transition-opacity duration-300 pointer-events-none z-10"></div>
+          
+          <div class="absolute bottom-0 inset-x-0 p-6 flex flex-col justify-end text-white z-20 text-right">
+            <span class="font-mono text-[9px] bg-royal-blue text-white px-2.5 py-0.5 rounded-full font-bold w-max mb-2.5">LUXURY MACRO</span>
+            <h3 class="font-sans font-black text-lg md:text-xl text-white group-hover:text-royal-blue transition-colors duration-300">
+              تصوير المجوهرات والذهب
+            </h3>
+            <p class="font-sans text-[11px] text-zinc-300 mt-1.5 leading-relaxed">
+              فن إبراز بريق الذهب وقطع الألماس النفيسة بدقة متقدمة تظهر أدق تفاصيل الصناعة.
+            </p>
+          </div>
+        </div>
+
+        <!-- Service Card 3: الأزياء والعبايات -->
+        <div class="relative w-[85vw] sm:w-[50vw] md:w-[35vw] lg:w-[28vw] h-[55vh] flex-none rounded-3xl overflow-hidden group shadow-[0_4px_30px_rgba(0,0,0,0.03)] border border-zinc-200/50 bg-white transition-all duration-300 hover:-translate-y-2">
+          <div class="absolute inset-0 overflow-hidden bg-zinc-100">
+            <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=800&q=80" 
+                 alt="الأزياء والعبايات" 
+                 class="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105 filter brightness-[0.95]"
+                 referrerpolicy="no-referrer">
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent opacity-90 transition-opacity duration-300 pointer-events-none z-10"></div>
+          
+          <div class="absolute bottom-0 inset-x-0 p-6 flex flex-col justify-end text-white z-20 text-right">
+            <span class="font-mono text-[9px] bg-royal-blue text-white px-2.5 py-0.5 rounded-full font-bold w-max mb-2.5">HIGH FASHION</span>
+            <h3 class="font-sans font-black text-lg md:text-xl text-white group-hover:text-royal-blue transition-colors duration-300">
+              تصوير الأزياء والعبايات
+            </h3>
+            <p class="font-sans text-[11px] text-zinc-300 mt-1.5 leading-relaxed">
+              إبراز تناسق الأقمشة، وانسيابية عبايات النخبة بظلال هندسية ولمسة عصرية جذابة.
+            </p>
+          </div>
+        </div>
+
+        <!-- Service Card 4: تصوير المنتجات -->
+        <div class="relative w-[85vw] sm:w-[50vw] md:w-[35vw] lg:w-[28vw] h-[55vh] flex-none rounded-3xl overflow-hidden group shadow-[0_4px_30px_rgba(0,0,0,0.03)] border border-zinc-200/50 bg-white transition-all duration-300 hover:-translate-y-2">
+          <div class="absolute inset-0 overflow-hidden bg-zinc-100">
+            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80" 
+                 alt="تصوير المنتجات" 
+                 class="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105 filter brightness-[0.95]"
+                 referrerpolicy="no-referrer">
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent opacity-90 transition-opacity duration-300 pointer-events-none z-10"></div>
+          
+          <div class="absolute bottom-0 inset-x-0 p-6 flex flex-col justify-end text-white z-20 text-right">
+            <span class="font-mono text-[9px] bg-royal-blue text-white px-2.5 py-0.5 rounded-full font-bold w-max mb-2.5">COMMERCIAL</span>
+            <h3 class="font-sans font-black text-lg md:text-xl text-white group-hover:text-royal-blue transition-colors duration-300">
+              تصوير المنتجات الفاخرة
+            </h3>
+            <p class="font-sans text-[11px] text-zinc-300 mt-1.5 leading-relaxed">
+              تحضير ديكورات ذكّية وتحكم دقيق بكل انكسار ضوئي لإبهار عملائك وتعظيم المبيعات.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Drag guidance instructions -->
+    <div class="w-full max-w-7xl mx-auto px-6 md:px-10 mt-6 flex justify-between items-center text-zinc-400 font-mono text-[10px] tracking-widest text-right">
+      <span>تنبيه: اسحب شريط التمرير يميناً ويساراً للتنقل في الكتالوج &harr;</span>
+      <span>تي او استديو • الطائف</span>
+    </div>
+
+  </section>
+
+  <!-- ================= SECTION 3: FOOTER / CONTACT US (Vertical Scroll Area) ================= -->
+  <footer id="footer" class="relative bg-white border-t border-zinc-100 text-deep-black py-16 md:py-24 z-10 select-none">
+    <div class="w-full max-w-7xl mx-auto px-6 md:px-[40px]">
+      
+      <!-- Sub-Intro Title to Contact Us Page -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-16 items-start">
+        <div class="lg:col-span-6">
+          <span class="font-mono text-xs text-royal-blue uppercase tracking-widest block mb-2 font-bold">03 / تواصل معنا • GET IN TOUCH</span>
+          <h2 class="font-sans font-black text-3xl md:text-5xl text-deep-black tracking-tight leading-tight">
+            هل أنت جاهز لتخليد جمال قصتك؟
+          </h2>
+          <p class="font-sans text-sm text-zinc-500 mt-4 leading-relaxed max-w-md">
+            نحن هنا لترجمة الأفكار الفنية إلى أعمال بصرية ترتقي بمشروعك وتوثق إبداعك بأعلى المستويات. تواصل معنا اليوم لتحصل على استشارة استوديو مخصصة مجانية.
+          </p>
+        </div>
+        <div class="lg:col-span-6 flex flex-wrap gap-4 lg:justify-end">
+          <a href="https://wa.me/966550992123" target="_blank" class="flex items-center gap-3 bg-royal-blue text-white hover:bg-zinc-900 transition-colors duration-300 px-6 py-4 rounded-2xl shadow-md border border-royal-blue font-bold text-sm">
+            <!-- Custom Outlined Svg WhatsApp Icon -->
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-.778.099-1.533.284-2.253"></path>
+            </svg>
+            احجز جلسة تصوير عبر الواتساب
+          </a>
+        </div>
+      </div>
+
+      <!-- Minimalist Horizontal Contact Links Layout row (Requested) -->
+      <div class="flex flex-col md:flex-row items-center justify-between gap-8 pb-12 border-b border-zinc-100/80">
+        
+        <!-- Far Right (RTL): Turki Omar Group Logo placeholder containing secure vector markup -->
+        <div class="flex items-center gap-3">
+          <div class="flex items-center transition-opacity duration-300 hover:opacity-85">
+            <!-- Vector Logo of Turki Omar Group -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 40" width="160" height="40" fill="none" class="h-10 w-auto">
+              <rect width="160" height="40" rx="8" fill="#F4F4F5" />
+              <!-- Elegant Typography -->
+              <text x="50%" y="24" font-family="'Tajawal', sans-serif" font-size="10.5" font-weight="800" fill="#1A1A1A" text-anchor="middle">مجموعة تركي عمر التجارية</text>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Center: Instant Connect Channels with Iconography -->
+        <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-8 font-mono text-sm leading-none">
+          
+          <!-- Socials and ID handle @tostudioksa -->
+          <div class="flex items-center gap-3 bg-zinc-50 border border-zinc-200/50 py-2.5 px-4 rounded-xl">
+            <span class="text-[10px] uppercase tracking-widest font-sans font-bold text-zinc-400">تابعنا:</span>
+            <span class="font-bold text-deep-black tracking-normal">@tostudioksa</span>
+            <div class="flex items-center gap-2 border-r border-zinc-200 pr-2.5">
+              <!-- Instagram -->
+              <a href="https://instagram.com/tostudioksa" target="_blank" class="text-royal-blue hover:text-zinc-900 transition-colors" title="Instagram">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              </a>
+              <!-- TikTok -->
+              <a href="https://tiktok.com/@tostudioksa" target="_blank" class="text-royal-blue hover:text-zinc-900 transition-colors" title="TikTok">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path></svg>
+              </a>
+              <!-- Snapchat -->
+              <a href="https://snapchat.com/add/tostudioksa" target="_blank" class="text-royal-blue hover:text-zinc-900 transition-colors" title="Snapchat">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 4 7 13 7 13s7-9 7-7a7 7 0 0 0-7-7z"></path><circle cx="12" cy="9" r="2"></circle></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Email info@tostudioksa.com -->
+          <a href="mailto:info@tostudioksa.com" class="flex items-center gap-2 text-deep-black hover:text-royal-blue transition-colors duration-300">
+            <svg class="w-4 h-4 text-royal-blue" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+            <span>info@tostudioksa.com</span>
+          </a>
+
+          <!-- WhatsApp +966 550992123 -->
+          <a href="https://wa.me/966550992123" target="_blank" class="flex items-center gap-2 text-deep-black hover:text-royal-blue transition-colors duration-300">
+            <!-- Custom outlined WhatsApp representation -->
+            <svg class="w-4 h-4 text-royal-blue" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+            </svg>
+            <span dir="ltr">+966 550992123</span>
+          </a>
+
+        </div>
+
+        <!-- Far Left: Custom Copyright Label -->
+        <div class="text-zinc-400 font-sans text-xs flex flex-col items-center md:items-end gap-1.5 text-center md:text-left">
+          <p class="uppercase font-semibold text-[10px] tracking-widest text-zinc-400">تو استوديو © ٢٠٢٦</p>
+          <p class="text-[9px] uppercase tracking-wider text-zinc-300">حقوق الطبع محفوظة - إحدى شركات مجموعة تركي عمر التجارية</p>
+        </div>
+
+      </div>
+
+      <!-- Quick Template Instructions Message Box for easier swap of assets -->
+      <div class="mt-8 bg-zinc-50 border border-zinc-200/40 rounded-2xl p-4 text-right">
+        <div class="flex items-center gap-2 mb-1.5 text-royal-blue">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+          <span class="font-sans font-bold text-xs">تعليمات استبدال الهوية والأصول:</span>
+        </div>
+        <p class="font-sans text-xxs text-zinc-400 leading-normal">
+          • لاستبدال اللوجو المستعرض، ابحث عن وسم <code class="font-mono bg-zinc-100 px-1 py-0.5 rounded text-zinc-600">&lt;svg&gt;</code> الذي يحتوي على المعرف "TO STUDIO" بدلاً من الصور المتوفرة واستبدله بمسار صورتك المفضلة <code class="font-mono bg-zinc-100 px-1 py-0.5 rounded text-zinc-600">&lt;img src="path_to_logo.png"&gt;</code>.<br>
+          • لتخصيص محفظة الصور لـ [مساحة الاستوديو، المجوهرات، العبايات، المنتجات]، ابحث عن العلامة <code class="font-mono bg-zinc-100 px-1 py-0.5 rounded text-zinc-600">&lt;img src="https://images.unsplash.com..."&gt;</code> داخل كل بطاقة خدمة وقم بتبديل الرابط بملف الصورة الفعلي لك.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ================= KEY ANIMATIONS DEFINITION ================= -->
+  <style>
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(15px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes scrollLine {
+      0% { transform: translateY(-100%); }
+      50% { transform: translateY(100%); }
+      100% { transform: translateY(-100%); }
+    }
+  </style>
+
+  <!-- Horizontal scroll helper slider controls drag support script -->
+  <script>
+    const slider = document.getElementById('horizontal-scroll-track');
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    if(slider) {
+      slider.addEventListener('mousedown', (e) => {
+        isDown = true;
+        slider.classList.add('active');
+        startX = e.pageX - slider.offsetLeft;
+        scrollLeft = slider.scrollLeft;
+      });
+      slider.addEventListener('mouseleave', () => {
+        isDown = false;
+        slider.classList.remove('active');
+      });
+      slider.addEventListener('mouseup', () => {
+        isDown = false;
+        slider.classList.remove('active');
+      });
+      slider.addEventListener('mousemove', (e) => {
+        if(!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - slider.offsetLeft;
+        const walk = (x - startX) * 2; // scroll speed multiplier
+        slider.scrollLeft = scrollLeft - walk;
+      });
+    }
+  </script>
+
+</body>
+</html>
